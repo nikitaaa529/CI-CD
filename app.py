@@ -68,4 +68,4 @@ def delete_file(filename):
 
 if __name__ == "__main__":
     # Для контейнера слушаем все интерфейсы; debug выключен.
-    app.run(host="0.0.0.0", port=8080, debug=False)
+    app.run(host="127.0.0.1", port=8080, debug=False)

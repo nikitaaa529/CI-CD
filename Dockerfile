@@ -18,4 +18,5 @@ COPY app.py .
 RUN mkdir -p /app/data && chown -R appuser:appgroup /app
 USER appuser
 EXPOSE 8080
-CMD ["python", "app.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
+ 
