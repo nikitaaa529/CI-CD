@@ -47,7 +47,7 @@ jobs:
       - name: Install test dependencies
         run: pip install -r requirements-dev.txt
       - name: Run tests and create JUnit report
-        run: pytest -v --junitxml=test-results.xml
+        run: python -m pytest -v -junitxml=test-results.xml
       - name: Save test report
         if: always()
         uses: actions/upload-artifact@v4
