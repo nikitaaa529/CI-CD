@@ -62,9 +62,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run Semgrep
-        run: |
-          docker run --rm -v "$PWD:/src" semgrep/semgrep \
-            semgrep scan --config p/python --error /src
+        run: semgrep scan --config p/python --error .
 
   deploy:
     name: Local Docker deploy
